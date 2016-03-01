@@ -1,0 +1,30 @@
+{
+  "name": "nodetest",
+  "description": "node test",
+  "version": "0.0.1",
+  "main": "./index.js",
+  "bin": {
+    "nodetest": "bin/nodetest"
+  },
+  "maintainers": "chewche",
+  "license": "MIT",
+  "repositories": [
+    {
+      "type": "git",
+      "url": "https://github.com/chewche/nodetest.git"
+    }
+  ],
+  "devDependencies": {
+    "async": "^1.5.2",
+    "commander": "^2.9.0",
+    "grunt": "^0.4.5",
+    "grunt-cmd-concat": "^0.2.7",
+    "grunt-cmd-transport": "~0.4.1",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-uglify": "^0.11.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "spm": "~2.2.5",
+    "spm-grunt": "^0.1.7",
+    "uglify-js": "^2.6.2"
+  }
+}

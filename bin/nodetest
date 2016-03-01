@@ -1,0 +1,24 @@
+#!/usr/bin/env node
+
+var nodetest = require('..');
+
+var program = require('commander');
+
+program.version(require('../package').version);
+
+program.usage('[dir] [options]')
+	.option('-s, --static-files-directory [static files directory]', 'static files directory')
+	.option('-w, --webapp-directory [webapp directory]', 'webapp directory')
+	.option('--cdn-root-dir-name [cdnRootDirName]', 'wenwen or baike')
+	.option('--debug-domain [debugDomain]', 'debugDomain: [debugDomain]')
+	.option('--deploy-domain [deployDomain]', 'deployDomain: [deployDomain]')
+	.option('--static-map-function [static-map-function]', 'static-map-function')
+	.option('--concat-all [concat-all]', 'concat-all')
+	.option('--sea-modules-directory [sea-modules-directory]', 'sea-modules-directory')
+	.option('--clean-view-dist [clean-view-dist]', 'clean-view-dist')
+	.option('--local [don\'t upload static files to cdn]', 'local')
+	.option('-d [enable debug]', 'enable debug');
+
+program.parse(process.argv);
+
+nodetest(program);
